@@ -1,0 +1,23 @@
+# Automatische Zeilenendenbehandlung
+* text=auto
+
+# Explizite Behandlung für bestimmte Dateitypen
+*.txt text
+*.md text
+*.html text
+*.css text
+*.js text
+*.jsx text
+*.ts text
+*.tsx text
+*.json text
+*.yml text
+*.yaml text
+
+# Binärdateien
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
