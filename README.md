@@ -36,13 +36,41 @@ npm run preview
 
 ## 🌐 Deployment
 
-This project is configured for easy deployment on Vercel:
+### GitHub Pages Deployment
+
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions:
+
+1. The workflow is defined in `.github/workflows/deploy.yml`
+2. On every push to the `main` branch, the site is automatically built and deployed
+3. No manual intervention required
+
+### Manual GitHub Pages Setup
+
+1. Go to your repository Settings
+2. Navigate to Pages in the left sidebar
+3. Under "Source", select "GitHub Actions"
+4. The deployment will automatically run on the next push to main
+
+### Vercel Deployment
+
+This project is also configured for easy deployment on Vercel:
 
 1. Push your code to GitHub
 2. Connect your repository to Vercel
 3. Deploy automatically with zero configuration
 
 The `vercel.json` file includes optimized settings for performance and security.
+
+### Netlify Deployment
+
+For Netlify deployment:
+
+1. Push your code to GitHub
+2. Connect your repository to Netlify
+3. Set the build command to `npm run build`
+4. Set the publish directory to `dist`
+
+The `netlify.toml` file includes optimized settings for SPA routing.
 
 ## 🎨 Design Features
 
