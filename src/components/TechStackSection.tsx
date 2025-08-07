@@ -1,4 +1,4 @@
-// TechStackSection.tsx - Komponente für die Darstellung der verwendeten Technologien
+// TechStackSection.tsx - Komponente für die Darstellung meiner Technologiekenntnisse im Portfolio
 import React from 'react';
 import { Typography, Box, Container, Grid, Paper, Tooltip } from '@mui/material';
 import { styled } from '@mui/material/styles';
@@ -10,11 +10,11 @@ const techCategories = [
     color: '#00bcd4', // Cyan
     technologies: [
       { name: 'React', icon: '/icons/react.svg' },
-      { name: 'Angular', icon: '/icons/angular.svg' },
-      { name: 'Vue.js', icon: '/icons/vue.svg' },
       { name: 'TypeScript', icon: '/icons/typescript.svg' },
       { name: 'Next.js', icon: '/icons/nextjs.svg' },
-      { name: 'Material UI', icon: '/icons/material-ui.svg' }
+      { name: 'Material UI', icon: '/icons/material-ui.svg' },
+      { name: 'Tailwind CSS', icon: '/icons/tailwind.svg' },
+      { name: 'Framer Motion', icon: '/icons/framer.svg' }
     ]
   },
   {
@@ -22,11 +22,11 @@ const techCategories = [
     color: '#e91e63', // Magenta
     technologies: [
       { name: 'Node.js', icon: '/icons/nodejs.svg' },
+      { name: 'Express', icon: '/icons/express.svg' },
       { name: 'Python', icon: '/icons/python.svg' },
-      { name: 'Java', icon: '/icons/java.svg' },
-      { name: 'Go', icon: '/icons/go.svg' },
-      { name: 'C#', icon: '/icons/csharp.svg' },
-      { name: 'PHP', icon: '/icons/php.svg' }
+      { name: 'FastAPI', icon: '/icons/fastapi.svg' },
+      { name: 'REST APIs', icon: '/icons/api.svg' },
+      { name: 'JWT Auth', icon: '/icons/jwt.svg' }
     ]
   },
   {
@@ -35,22 +35,22 @@ const techCategories = [
     technologies: [
       { name: 'MongoDB', icon: '/icons/mongodb.svg' },
       { name: 'PostgreSQL', icon: '/icons/postgresql.svg' },
-      { name: 'MySQL', icon: '/icons/mysql.svg' },
-      { name: 'Redis', icon: '/icons/redis.svg' },
+      { name: 'Prisma', icon: '/icons/prisma.svg' },
+      { name: 'Supabase', icon: '/icons/supabase.svg' },
       { name: 'Firebase', icon: '/icons/firebase.svg' },
-      { name: 'GraphQL', icon: '/icons/graphql.svg' }
+      { name: 'Redis', icon: '/icons/redis.svg' }
     ]
   },
   {
-    name: 'DevOps & Cloud',
+    name: 'Tools & KI',
     color: '#4caf50', // Green
     technologies: [
-      { name: 'Docker', icon: '/icons/docker.svg' },
-      { name: 'Kubernetes', icon: '/icons/kubernetes.svg' },
-      { name: 'AWS', icon: '/icons/aws.svg' },
-      { name: 'Azure', icon: '/icons/azure.svg' },
-      { name: 'Google Cloud', icon: '/icons/gcp.svg' },
-      { name: 'CI/CD', icon: '/icons/cicd.svg' }
+      { name: 'Git', icon: '/icons/git.svg' },
+      { name: 'Vite', icon: '/icons/vite.svg' },
+      { name: 'OpenAI API', icon: '/icons/openai.svg' },
+      { name: 'Netlify', icon: '/icons/netlify.svg' },
+      { name: 'Vercel', icon: '/icons/vercel.svg' },
+      { name: 'Jest', icon: '/icons/jest.svg' }
     ]
   }
 ];
@@ -130,10 +130,10 @@ const TechStackSection: React.FC = () => {
     <Box id="tech-stack" sx={{ py: 10, position: 'relative' }}>
       <Container maxWidth="lg">
         <SectionTitle className="neon-text">
-          Unsere Technologien
+          Meine Tech-Skills
         </SectionTitle>
         <SectionSubtitle>
-          Wir setzen auf moderne Technologien und bleiben stets am Puls der Zeit, um innovative Lösungen zu entwickeln
+          Die Technologien, mit denen ich arbeite, um moderne und effiziente Webanwendungen zu entwickeln
         </SectionSubtitle>
         
         <Grid container spacing={6}>
@@ -194,7 +194,7 @@ const TechStackSection: React.FC = () => {
             }}
             className="neon-pulse"
           >
-            Immer lernen, immer weiterentwickeln
+            Kontinuierliches Lernen
           </Typography>
           <Typography
             variant="body1"
@@ -205,8 +205,8 @@ const TechStackSection: React.FC = () => {
               margin: '0 auto'
             }}
           >
-            Unser Team bleibt an der Spitze der Technologie-Trends und lernt kontinuierlich 
-            neue Tools und Frameworks, um die besten Lösungen für unsere Kunden zu liefern.
+            Ich bleibe stets auf dem neuesten Stand der Technologie-Entwicklung und erweitere 
+            kontinuierlich meine Fähigkeiten, um innovative und zukunftssichere Lösungen zu schaffen.
           </Typography>
         </Box>
       </Container>

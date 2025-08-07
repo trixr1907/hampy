@@ -1,4 +1,4 @@
-// AboutSection.tsx - Komponente für den About-Bereich der Homepage
+// AboutSection.tsx - Komponente für den About-Bereich der persönlichen Portfolio-Seite
 import React from 'react';
 import { Typography, Box, Stack, Container, Grid } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
@@ -52,7 +52,7 @@ const AboutSection: React.FC = () => {
               }}
               className="neon-text"
             >
-              Die Zukunft der Technologie gestalten
+              Über mich
             </Typography>
             
             <Typography
@@ -64,10 +64,10 @@ const AboutSection: React.FC = () => {
                 mb: 2
               }}
             >
-              Bei IVO-TECH sind wir leidenschaftlich dabei, Unternehmen durch innovative 
-              Technologielösungen zu transformieren. Mit über einem Jahrzehnt Erfahrung arbeitet 
-              unser Team aus Experten-Entwicklern und Strategen eng mit Kunden zusammen, um 
-              modernste Lösungen zu liefern, die Wachstum und Erfolg vorantreiben.
+              Als leidenschaftlicher Webentwickler mit Fokus auf moderne Frontend-Technologien und KI-Integration
+              entwickle ich digitale Lösungen, die nicht nur funktional, sondern auch ästhetisch ansprechend sind.
+              Meine Reise in der Softwareentwicklung begann vor über 5 Jahren und hat mich zu einem Spezialisten
+              für React, TypeScript und moderne Web-Frameworks gemacht.
             </Typography>
 
             <Typography
@@ -78,15 +78,15 @@ const AboutSection: React.FC = () => {
                 lineHeight: 1.6
               }}
             >
-              Wir glauben an die Macht der Technologie, komplexe Probleme zu lösen und neue 
-              Möglichkeiten zu schaffen. Unser Ansatz kombiniert technische Exzellenz mit 
-              strategischem Denken, um sicherzustellen, dass jedes Projekt messbare Ergebnisse liefert.
+              Ich glaube an die Kraft gut durchdachter Benutzeroberflächen und sauberen Codes. Mein Ziel ist es,
+              digitale Erlebnisse zu schaffen, die nicht nur beeindrucken, sondern auch echten Mehrwert bieten.
+              Dabei setze ich auf neueste Technologien und kontinuierliches Lernen, um stets auf dem aktuellen Stand zu bleiben.
             </Typography>
 
             <Stack direction="row" spacing={6} sx={{ my: 4 }}>
               <Box>
                 <Typography variant="h4" sx={{ fontWeight: 700, color: 'primary.main', mb: 1 }} className="neon-pulse">
-                  10+
+                  5+
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Jahre Erfahrung
@@ -94,15 +94,15 @@ const AboutSection: React.FC = () => {
               </Box>
               <Box>
                 <Typography variant="h4" sx={{ fontWeight: 700, color: 'primary.main', mb: 1 }} className="neon-pulse">
-                  200+
+                  3
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Zufriedene Kunden
+                  Spezialisierungen
                 </Typography>
               </Box>
               <Box>
                 <Typography variant="h4" sx={{ fontWeight: 700, color: 'primary.main', mb: 1 }} className="neon-pulse">
-                  500+
+                  30+
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Abgeschlossene Projekte
@@ -119,7 +119,7 @@ const AboutSection: React.FC = () => {
                 }
               }}
             >
-              Mehr über uns erfahren
+              Mein Portfolio ansehen
             </CTAButton>
           </Box>
         </Grid>

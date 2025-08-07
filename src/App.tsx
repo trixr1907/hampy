@@ -1,32 +1,49 @@
+// App.tsx - Hauptkomponente der Anwendung mit Theme-Provider, Error-Boundary und Homepage
 import React from 'react';
-import { ThemeProvider } from '@mui/material/styles';
-import { CssBaseline } from '@mui/material';
-import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
-import theme from './theme';
-import Homepage from './components/Homepage';
+import createCache from '@emotion/cache';
+import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from './components/ErrorBoundary';
-import NotificationProvider from './components/NotificationProvider';
+import Enhanced3DHomepage from './components/Enhanced3DHomepage';
+import { NotificationProvider } from './context/NotificationContext';
+import ThemeProvider from './theme/ThemeProvider';
+import PerformanceOptimizer from './utils/PerformanceOptimizer';
+import ServiceWorkerRegistration from './utils/ServiceWorkerRegistration';
+import CookieConsent from './components/CookieConsent';
 
-const createEmotionCache = () => {
-  return createCache({
-    key: 'mui',
-    prepend: true
-  });
-};
-
-const emotionCache = createEmotionCache();
+// Emotion Cache für bessere Performance
+const emotionCache = createCache({
+  key: 'ivo-tech',
+  prepend: true
+});
 
 const App: React.FC = () => {
   return (
     <ErrorBoundary>
       <CacheProvider value={emotionCache}>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <NotificationProvider>
-            <Homepage />
-          </NotificationProvider>
-        </ThemeProvider>
+        <HelmetProvider>
+          <ThemeProvider>
+            <NotificationProvider>
+              <ServiceWorkerRegistration>
+                <PerformanceOptimizer
+                  preconnectUrls={[
+                    'https://fonts.googleapis.com',
+                    'https://fonts.gstatic.com',
+                    'https://cdn.jsdelivr.net'
+                  ]}
+                  preloadFonts={[
+                    { href: 'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap', type: 'text/css' },
+                    { href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap', type: 'text/css' }
+                  ]}
+                  deferScripts={true}
+                >
+                  <Enhanced3DHomepage />
+                  <CookieConsent />
+                </PerformanceOptimizer>
+              </ServiceWorkerRegistration>
+            </NotificationProvider>
+          </ThemeProvider>
+        </HelmetProvider>
       </CacheProvider>
     </ErrorBoundary>
   );

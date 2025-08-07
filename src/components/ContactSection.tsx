@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Typography, Box, Container, Grid, TextField, Button, Paper, Snackbar, Alert, CircularProgress } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import SendIcon from '@mui/icons-material/Send';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 
@@ -246,10 +245,10 @@ const ContactSection: React.FC = () => {
     <Box id="contact" sx={{ py: 10, position: 'relative' }}>
       <Container maxWidth="lg">
         <SectionTitle className="neon-text">
-          Kontaktieren Sie uns
+          Kontakt
         </SectionTitle>
         <SectionSubtitle>
-          Haben Sie Fragen oder möchten Sie ein Projekt besprechen? Unser Team steht Ihnen gerne zur Verfügung.
+          Haben Sie Fragen oder möchten Sie ein Projekt besprechen? Ich freue mich auf Ihre Nachricht!
         </SectionSubtitle>
         
         <Grid container spacing={6}>
@@ -258,7 +257,7 @@ const ContactSection: React.FC = () => {
             <StyledPaper>
               <Box component="form" onSubmit={handleSubmit}>
                 <Typography variant="h6" sx={{ mb: 3, fontWeight: 600, color: 'text.primary' }}>
-                  Senden Sie uns eine Nachricht
+                  Senden Sie mir eine Nachricht
                 </Typography>
               
               <Grid container spacing={2}>
@@ -348,22 +347,10 @@ const ContactSection: React.FC = () => {
             <Box sx={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <Box>
                 <Typography variant="h6" sx={{ mb: 4, fontWeight: 600, color: 'text.primary' }}>
-                  Kontaktinformationen
+                  Meine Kontaktdaten
                 </Typography>
                 
-                <ContactInfoCard>
-                  <ContactIconWrapper>
-                    <LocationOnIcon fontSize="medium" />
-                  </ContactIconWrapper>
-                  <Box>
-                    <Typography variant="subtitle1" sx={{ fontWeight: 600, color: 'text.primary' }}>
-                      Adresse
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      Technologiepark 8, 10115 Berlin, Deutschland
-                    </Typography>
-                  </Box>
-                </ContactInfoCard>
+
                 
                 <ContactInfoCard>
                   <ContactIconWrapper>
@@ -374,7 +361,10 @@ const ContactSection: React.FC = () => {
                       E-Mail
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      info@ivo-tech.de
+                      info@ivo-tech.com
+                    </Typography>
+                    <Typography variant="caption" color="text.secondary" sx={{ fontSize: '0.7rem', fontStyle: 'italic' }}>
+                      (wird an yves_schenker@gmx.de weitergeleitet)
                     </Typography>
                   </Box>
                 </ContactInfoCard>
@@ -385,25 +375,87 @@ const ContactSection: React.FC = () => {
                   </ContactIconWrapper>
                   <Box>
                     <Typography variant="subtitle1" sx={{ fontWeight: 600, color: 'text.primary' }}>
-                      Telefon
+                      WhatsApp
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      +49 (0) 30 123 456 789
-                    </Typography>
+                    <Button 
+                      variant="outlined" 
+                      color="primary" 
+                      size="small"
+                      sx={{ mt: 1 }}
+                      onClick={() => window.open('https://wa.me/send?text=Hallo%20Ivo,%20ich%20habe%20deine%20Website%20besucht%20und%20m%C3%B6chte%20gerne%20Kontakt%20aufnehmen.')}
+                    >
+                      WhatsApp öffnen
+                    </Button>
                   </Box>
                 </ContactInfoCard>
               </Box>
               
               <Box sx={{ mt: 4, p: 3, borderRadius: '8px', backgroundColor: 'rgba(0, 188, 212, 0.1)', border: '1px dashed rgba(0, 255, 255, 0.3)' }}>
                 <Typography variant="subtitle1" sx={{ fontWeight: 600, color: 'primary.main', mb: 1 }}>
-                  Geschäftszeiten
+                  Social Media
                 </Typography>
-                <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-                  Montag - Freitag: 9:00 - 18:00 Uhr
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Wochenende: Geschlossen
-                </Typography>
+                <Grid container spacing={1} sx={{ mt: 1 }}>
+                  <Grid item>
+                    <Button 
+                      variant="outlined" 
+                      size="small"
+                      onClick={() => window.open('https://www.facebook.com/yves.schenker', '_blank')}
+                      sx={{ minWidth: 'auto', px: 1 }}
+                    >
+                      Facebook
+                    </Button>
+                  </Grid>
+                  <Grid item>
+                    <Button 
+                      variant="outlined" 
+                      size="small"
+                      onClick={() => window.open('https://x.com/ivo_ma68', '_blank')}
+                      sx={{ minWidth: 'auto', px: 1 }}
+                    >
+                      X
+                    </Button>
+                  </Grid>
+                  <Grid item>
+                    <Button 
+                      variant="outlined" 
+                      size="small"
+                      onClick={() => window.open('https://www.instagram.com/yvesm/', '_blank')}
+                      sx={{ minWidth: 'auto', px: 1 }}
+                    >
+                      Instagram
+                    </Button>
+                  </Grid>
+                  <Grid item>
+                    <Button 
+                      variant="outlined" 
+                      size="small"
+                      onClick={() => window.open('https://www.linkedin.com/in/yves-ivo', '_blank')}
+                      sx={{ minWidth: 'auto', px: 1 }}
+                    >
+                      LinkedIn
+                    </Button>
+                  </Grid>
+                  <Grid item>
+                    <Button 
+                      variant="outlined" 
+                      size="small"
+                      onClick={() => window.open('https://github.com/trixr1907', '_blank')}
+                      sx={{ minWidth: 'auto', px: 1 }}
+                    >
+                      GitHub
+                    </Button>
+                  </Grid>
+                  <Grid item>
+                    <Button 
+                      variant="outlined" 
+                      size="small"
+                      onClick={() => window.open('https://www.reddit.com/user/trixr1907', '_blank')}
+                      sx={{ minWidth: 'auto', px: 1 }}
+                    >
+                      Reddit
+                    </Button>
+                  </Grid>
+                </Grid>
               </Box>
             </Box>
           </Grid>

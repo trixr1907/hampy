@@ -1,0 +1,22 @@
+# netlify.toml
+# Diese Konfigurationsdatei wird für das Deployment auf Netlify verwendet
+# Sie definiert Build-Einstellungen, Weiterleitungsregeln und CMS-Konfiguration
+
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+# Weiterleitungsregeln für SPA (Single Page Application)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Umgebungsvariablen für die Produktion
+[context.production.environment]
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--legacy-peer-deps"
+
+# Spezielle Build-Einstellungen für TypeScript
+[build.environment]
+  VITE_DISABLE_ESLINT_PLUGIN = "true"

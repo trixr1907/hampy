@@ -1,4 +1,5 @@
 // ContactModal.tsx - Modal-Komponente für Kontaktformular mit Validierung und Formularlogik
+// ContactModal.tsx - Modal-Komponente für persönliches Kontaktformular
 import React, { useState } from 'react';
 import {
   Dialog,
@@ -99,7 +100,9 @@ const ContactModal: React.FC<ContactModalProps> = ({ open, onClose }) => {
   };
 
   const handleSubmit = async () => {
-    if (!validateForm()) return;
+    if (!validateForm()) {
+      return;
+    }
 
     setIsSubmitting(true);
     setSubmitStatus(null);
@@ -111,7 +114,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ open, onClose }) => {
       // Erfolgreiche Übermittlung
       setSubmitStatus({
         success: true,
-        message: 'Ihre Nachricht wurde erfolgreich gesendet. Wir werden uns in Kürze bei Ihnen melden.'
+        message: 'Ihre Nachricht wurde erfolgreich gesendet. Ich werde mich in Kürze bei Ihnen melden.'
       });
       
       // Formular zurücksetzen
@@ -167,7 +170,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ open, onClose }) => {
           fontWeight: 700,
           textShadow: '0 0 8px currentColor'
         }}>
-          Kontaktieren Sie uns
+          Kontaktieren Sie mich
         </Typography>
         <IconButton onClick={handleClose} disabled={isSubmitting}>
           <CloseIcon />

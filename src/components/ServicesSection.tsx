@@ -1,4 +1,4 @@
-// ServicesSection.tsx - Komponente für den Dienstleistungsbereich der Homepage
+// ServicesSection.tsx - Komponente für den Fähigkeiten-Bereich der persönlichen Portfolio-Seite
 import React from 'react';
 import { Box, Container, Grid, Typography, Card, CardContent, Stack } from '@mui/material';
 import { styled } from '@mui/material/styles';
@@ -80,75 +80,75 @@ const ServiceDescription = styled(Typography)(({ theme }) => ({
 
 const services = [
   {
-    id: 'web-dev',
-    title: 'Webentwicklung',
-    description: 'Moderne, responsive Websites und Web-Anwendungen mit den neuesten Technologien.',
+    id: 'frontend',
+    title: 'Frontend-Entwicklung',
+    description: 'Entwicklung moderner, responsiver und benutzerfreundlicher Weboberflächen mit aktuellen Technologien.',
     icon: <CodeIcon fontSize="large" />,
     details: [
-      'Frontend-Entwicklung mit React, Angular, Vue',
-      'Backend-Entwicklung mit Node.js, Python, Java',
-      'Progressive Web Apps (PWA)',
-      'E-Commerce-Lösungen'
+      'React & React Hooks',
+      'TypeScript',
+      'Material-UI & Styled Components',
+      'Responsive Design & Animationen'
     ]
   },
   {
-    id: 'mobile-dev',
-    title: 'Mobile Apps',
-    description: 'Native und Cross-Platform-Anwendungen für iOS und Android mit nahtloser Benutzererfahrung.',
-    icon: <SmartphoneIcon fontSize="large" />,
+    id: 'backend',
+    title: 'Backend-Entwicklung',
+    description: 'Erstellung robuster Server-Anwendungen und APIs für zuverlässige Datenverarbeitung.',
+    icon: <StorageIcon fontSize="large" />,
     details: [
-      'Native iOS-Entwicklung (Swift)',
-      'Native Android-Entwicklung (Kotlin)',
-      'Cross-Platform mit React Native, Flutter',
-      'App Store Optimierung'
+      'Node.js & Express',
+      'RESTful APIs',
+      'MongoDB & PostgreSQL',
+      'Authentifizierung & Sicherheit'
+    ]
+  },
+  {
+    id: 'ai',
+    title: 'KI-Integration',
+    description: 'Integration von KI-Technologien in Webanwendungen für intelligente Funktionen und Automatisierung.',
+    icon: <AnalyticsIcon fontSize="large" />,
+    details: [
+      'OpenAI API & LLM-Integration',
+      'Chatbots & Assistenten',
+      'Datenanalyse & Visualisierung',
+      'Automatisierte Prozesse'
     ]
   },
   {
     id: 'cloud',
-    title: 'Cloud-Lösungen',
-    description: 'Skalierbare Cloud-Infrastruktur und Dienste für maximale Flexibilität und Leistung.',
+    title: 'Cloud-Entwicklung',
+    description: 'Deployment und Verwaltung von Anwendungen in der Cloud für optimale Skalierbarkeit.',
     icon: <CloudIcon fontSize="large" />,
     details: [
-      'AWS, Azure, Google Cloud',
-      'Serverless Architecture',
-      'Microservices',
-      'Container-Orchestrierung mit Kubernetes'
+      'AWS & Netlify',
+      'Serverless Functions',
+      'CI/CD-Pipelines',
+      'Monitoring & Logging'
     ]
   },
   {
-    id: 'data',
-    title: 'Datenbanken & API',
-    description: 'Robuste Datenbankarchitekturen und API-Entwicklung für effiziente Datenverarbeitung.',
-    icon: <StorageIcon fontSize="large" />,
+    id: 'mobile',
+    title: 'Mobile Web',
+    description: 'Entwicklung von mobil-optimierten Webanwendungen und Progressive Web Apps.',
+    icon: <SmartphoneIcon fontSize="large" />,
     details: [
-      'SQL & NoSQL Datenbanken',
-      'RESTful API Design',
-      'GraphQL',
-      'Datenmodellierung und -migration'
+      'Progressive Web Apps (PWA)',
+      'Responsive Mobile Design',
+      'Touch-Optimierte Interfaces',
+      'Offline-Funktionalität'
     ]
   },
   {
     id: 'security',
-    title: 'Cybersicherheit',
-    description: 'Umfassende Sicherheitslösungen zum Schutz Ihrer Anwendungen und Daten vor Bedrohungen.',
+    title: 'Web-Sicherheit',
+    description: 'Implementation von Sicherheitsmaßnahmen zum Schutz von Webanwendungen und Benutzerdaten.',
     icon: <SecurityIcon fontSize="large" />,
     details: [
-      'Sicherheitsaudits',
-      'Penetrationstests',
       'Sichere Authentifizierung',
-      'Datenverschlüsselung'
-    ]
-  },
-  {
-    id: 'analytics',
-    title: 'KI & Datenanalyse',
-    description: 'Fortschrittliche Analysen und KI-Lösungen zur Gewinnung wertvoller Erkenntnisse aus Ihren Daten.',
-    icon: <AnalyticsIcon fontSize="large" />,
-    details: [
-      'Machine Learning',
-      'Predictive Analytics',
-      'Business Intelligence',
-      'Datenvisualisierung'
+      'HTTPS & SSL',
+      'OWASP Best Practices',
+      'Datenschutz (DSGVO)'
     ]
   }
 ];
@@ -159,10 +159,10 @@ const ServicesSection: React.FC = () => {
       <Container maxWidth="lg">
         <ParallaxSection speed={0.2}>
           <SectionTitle className="neon-text">
-            Unsere Dienstleistungen
+            Meine Fähigkeiten
           </SectionTitle>
           <SectionSubtitle>
-            Wir bieten umfassende Technologielösungen, die auf Ihre Geschäftsanforderungen zugeschnitten sind
+            Spezialisiert auf moderne Webentwicklung mit Fokus auf Benutzerfreundlichkeit und innovative Technologien
           </SectionSubtitle>
         </ParallaxSection>
         

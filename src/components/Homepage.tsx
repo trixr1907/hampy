@@ -1,3 +1,4 @@
+// Homepage.tsx - Hauptkomponente für die persönliche Portfolio-Seite
 import React from 'react';
 import { Box } from '@mui/material';
 import Navigation from './Navigation';
@@ -6,8 +7,7 @@ import ServicesSection from './ServicesSection';
 import AboutSection from './AboutSection';
 import StatsSection from './StatsSection';
 import TechStackSection from './TechStackSection';
-// Testimonials-Sektion wurde entfernt
-import PricingSection from './PricingSection';
+// Pricing-Sektion und Testimonials-Sektion wurden entfernt
 import ContactSection from './ContactSection';
 import Footer from './Footer';
 import AnimatedBackground from './AnimatedBackground';
@@ -28,7 +28,6 @@ const Homepage: React.FC = () => {
       <StatsSection />
       <TechStackSection />
       <TestimonialsRemover />
-      <PricingSection />
       <ContactSection />
       <Footer />
       <BackToTop />

@@ -1,21 +1,52 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="IVO-TECH - Innovative Technology Solutions for Modern Business. Transform your digital vision into reality with cutting-edge technology and expert development." />
-    <meta name="keywords" content="web development, mobile apps, cloud solutions, cybersecurity, AI, machine learning, technology solutions" />
+    <!-- Netlify Identity Widget for Decap CMS authentication -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <meta name="description" content="IVO-TECH - Innovative Technologielösungen für moderne Unternehmen. Verwandeln Sie Ihre digitale Vision mit modernster Technologie und Expertenentwicklung in Realität." />
+    <meta name="keywords" content="Webentwicklung, Mobile Apps, Cloud-Lösungen, Cybersicherheit, KI, Machine Learning, Technologielösungen, 3D Web, Quantum Computing" />
     <meta name="author" content="IVO-TECH" />
-    <meta name="theme-color" content="#2563eb" />
+    <meta name="theme-color" content="#00BFFF" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="IVO-TECH" />
-    <title>IVO-TECH - Innovative Technology Solutions</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.ivo-tech.de/" />
+    <meta property="og:title" content="IVO-TECH - Innovative Technologielösungen" />
+    <meta property="og:description" content="Innovative Technologielösungen für moderne Unternehmen mit 3D Web, KI-Integration und Cloud-Services." />
+    <meta property="og:image" content="/images/ivo-tech-og-image.jpg" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.ivo-tech.de/" />
+    <meta property="twitter:title" content="IVO-TECH - Innovative Technologielösungen" />
+    <meta property="twitter:description" content="Innovative Technologielösungen für moderne Unternehmen mit 3D Web, KI-Integration und Cloud-Services." />
+    <meta property="twitter:image" content="/images/ivo-tech-og-image.jpg" />
+    
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://www.ivo-tech.de/" />
+    <title>IVO-TECH - Innovative Technologielösungen</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- Netlify Identity redirect script -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
   </body>
 </html>

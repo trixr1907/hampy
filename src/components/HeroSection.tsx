@@ -180,12 +180,12 @@ const HeroSection: React.FC = () => {
             }}
           >
             <HeroTitle className="neon-flicker">
-              Innovative Technologie-Lösungen für Moderne Unternehmen
+              Webentwicklung & KI-Integration
             </HeroTitle>
             
             <HeroSubtitle>
-              Wir verwandeln Ihre digitale Vision in die Realität mit modernster Technologie, 
-              Expertentwicklung und strategischer Innovation, die Wachstum und Erfolg vorantreibt.
+              Ich entwickle moderne Webanwendungen mit Fokus auf Benutzerfreundlichkeit, Performance und innovative Technologien. 
+              Meine Expertise liegt in der Integration von KI-Lösungen und der Entwicklung maßgeschneiderter digitaler Erlebnisse.
             </HeroSubtitle>
 
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} sx={{ mt: 4 }}>
@@ -199,7 +199,7 @@ const HeroSection: React.FC = () => {
                   }
                 }}
               >
-                Projekt starten
+                Kontakt aufnehmen
               </CTAButton>
               <SecondaryButton 
                 size="large"
@@ -210,33 +210,33 @@ const HeroSection: React.FC = () => {
                   }
                 }}
               >
-                Unsere Arbeit ansehen
+                Meine Projekte
               </SecondaryButton>
             </Stack>
 
             <Stack direction="row" spacing={6} sx={{ mt: 6 }}>
               <Box>
                 <Typography variant="h4" sx={{ fontWeight: 700, color: 'primary.main' }} className="neon-pulse">
-                  500+
+                  5+
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Projekte abgeschlossen
+                  Jahre Erfahrung
                 </Typography>
               </Box>
               <Box>
                 <Typography variant="h4" sx={{ fontWeight: 700, color: 'primary.main' }} className="neon-pulse">
-                  98%
+                  30+
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Kundenzufriedenheit
+                  Abgeschlossene Projekte
                 </Typography>
               </Box>
               <Box>
                 <Typography variant="h4" sx={{ fontWeight: 700, color: 'primary.main' }} className="neon-pulse">
-                  24/7
+                  10+
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Support verfügbar
+                  Technologien
                 </Typography>
               </Box>
             </Stack>
@@ -252,10 +252,10 @@ const HeroSection: React.FC = () => {
           }}
         >
           <Typography variant="body2" sx={{ fontWeight: 600, mb: 1 }}>
-            🚀 Neuestes Projekt
+            🚀 Aktuelles Projekt
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            KI-gestützte Analyseplattform
+            KI-gestützte Webapplikation
           </Typography>
         </FloatingCard>
 
@@ -267,10 +267,10 @@ const HeroSection: React.FC = () => {
           }}
         >
           <Typography variant="body2" sx={{ fontWeight: 600, mb: 1 }}>
-            ⭐ 5.0 Bewertung
+            💻 Spezialisierung
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Von 200+ Kunden
+            React, TypeScript, AI
           </Typography>
         </FloatingCard>
       </Container>

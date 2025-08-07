@@ -69,9 +69,9 @@ const Navigation: React.FC = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   const navItems = [
-    { label: 'Dienstleistungen', id: 'services' },
-    { label: 'Über uns', id: 'about' },
-    { label: 'Technologie', id: 'technology' },
+    { label: 'Projekte', id: 'services' },
+    { label: 'Über mich', id: 'about' },
+    { label: 'Technologien', id: 'technology' },
     { label: 'Kontakt', id: 'contact' }
   ];
 
@@ -120,7 +120,7 @@ const Navigation: React.FC = () => {
         ))}
         <ListItem sx={{ mt: 2 }}>
           <CTAButton fullWidth onClick={() => setContactModalOpen(true)}>
-            Jetzt starten
+            Kontakt
           </CTAButton>
         </ListItem>
       </List>
@@ -133,23 +133,35 @@ const Navigation: React.FC = () => {
         position="fixed" 
         elevation={0}
         sx={{
-          backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.95)' : 'rgba(255, 255, 255, 0.85)',
-          backdropFilter: scrolled ? 'blur(25px)' : 'blur(20px)'
+          backgroundColor: scrolled ? 'rgba(10, 10, 10, 0.95)' : 'rgba(10, 10, 10, 0.85)',
+          backdropFilter: scrolled ? 'blur(25px)' : 'blur(20px)',
+          borderBottom: '1px solid rgba(0, 255, 255, 0.5)',
+          boxShadow: '0 0 30px rgba(0, 255, 255, 0.4)'
         }}
       >
-        <Toolbar sx={{ px: { xs: 2, md: 4 } }}>
+        <Toolbar sx={{ px: { xs: 2, md: 4 }, justifyContent: 'space-between' }}>
           <Typography
             variant="h6"
             onClick={scrollToTop}
             sx={{
-              flexGrow: 1,
               fontWeight: 900,
               color: theme.palette.primary.main,
               fontFamily: '"Orbitron", monospace',
               cursor: 'pointer',
-              textShadow: '0 0 10px currentColor',
+              textShadow: '0 0 10px currentColor, 0 0 15px currentColor',
+              fontSize: '1.5rem',
+              letterSpacing: '1px',
+              animation: 'neonPulse 2s infinite alternate',
               '&:hover': {
-                textShadow: '0 0 20px currentColor, 0 0 30px currentColor'
+                textShadow: '0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor'
+              },
+              '@keyframes neonPulse': {
+                '0%': {
+                  textShadow: '0 0 10px currentColor, 0 0 20px currentColor'
+                },
+                '100%': {
+                  textShadow: '0 0 15px currentColor, 0 0 25px currentColor, 0 0 35px currentColor'
+                }
               }
             }}
             className="neon-pulse"
@@ -174,7 +186,7 @@ const Navigation: React.FC = () => {
                 </NavButton>
               ))}
               <CTAButton sx={{ ml: 2 }} onClick={() => setContactModalOpen(true)}>
-                Jetzt starten
+                Kontakt
               </CTAButton>
             </Stack>
           )}
