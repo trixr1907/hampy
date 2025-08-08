@@ -160,9 +160,12 @@ const FloatingTechBadge = styled(Box)<{
   delay: number; 
   color: string;
   position: { top?: string; bottom?: string; left?: string; right?: string };
-}>(({ theme, delay, color, position }) => ({
+}>(({ theme: _theme, delay, color, position }) => ({
   position: 'absolute',
-  ...position,
+  top: position.top,
+  bottom: position.bottom,
+  left: position.left,
+  right: position.right,
   width: '80px',
   height: '80px',
   backgroundColor: 'rgba(26, 26, 42, 0.9)',

@@ -32,3 +32,16 @@ dist-ssr
 
 # Vercel
 .vercel
+
+# Claude Code & Development Tools
+settings.local.json
+install-mcp-servers.bat
+
+# Production builds & analysis
+build-analysis/
+bundle-analyzer-report/
+
+# Security & Sensitive Data
+*.pem
+*.key
+secrets.json

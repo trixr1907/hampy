@@ -85,7 +85,6 @@ const SectionSubtitle = styled(Typography)(({ theme }) => ({
   margin: '0 auto',
   color: theme.palette.text.secondary,
   lineHeight: 1.7,
-  marginBottom: theme.spacing(8),
   position: 'relative',
   zIndex: 2
 }));

@@ -14,7 +14,6 @@ import AnimatedBackground from './AnimatedBackground';
 import ScrollProgress from './ScrollProgress';
 import BackToTop from './BackToTop';
 import CookieConsent from './CookieConsent';
-import TestimonialsRemover from './TestimonialsRemover';
 
 const Homepage: React.FC = () => {
   return (
@@ -27,7 +26,6 @@ const Homepage: React.FC = () => {
       <AboutSection />
       <StatsSection />
       <TechStackSection />
-      <TestimonialsRemover />
       <ContactSection />
       <Footer />
       <BackToTop />

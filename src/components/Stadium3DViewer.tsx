@@ -149,7 +149,10 @@ const Floodlight = styled(Box)<{
   isActive: boolean;
 }>(({ position, isActive }) => ({
   position: 'absolute',
-  ...position,
+  top: position.top,
+  bottom: position.bottom,
+  left: position.left,
+  right: position.right,
   width: '20px',
   height: '40px',
   background: 'linear-gradient(180deg, #e5e7eb 0%, #9ca3af 100%)',

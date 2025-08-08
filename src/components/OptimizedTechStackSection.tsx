@@ -67,8 +67,7 @@ const SectionSubtitle = styled(Typography)(({ theme }) => ({
   maxWidth: '800px',
   margin: '0 auto',
   color: theme.palette.text.secondary,
-  lineHeight: 1.7,
-  marginBottom: theme.spacing(8)
+  lineHeight: 1.7
 }));
 
 const CategoryContainer = styled(Box)(({ theme }) => ({
